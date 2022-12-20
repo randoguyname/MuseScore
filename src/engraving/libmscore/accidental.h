@@ -109,6 +109,7 @@ public:
 
     SymId symbol() const;
     Note* note() const { return (explicitParent() && explicitParent()->isNote()) ? toNote(explicitParent()) : 0; }
+    double centOffset() const;
 
     AccidentalBracket bracket() const { return _bracket; }
     void setBracket(AccidentalBracket val) { _bracket = val; }

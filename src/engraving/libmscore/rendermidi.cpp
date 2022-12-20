@@ -36,6 +36,7 @@
 
 #include "arpeggio.h"
 #include "articulation.h"
+#include "accidental.h"
 #include "bend.h"
 #include "changeMap.h"
 #include "chord.h"
@@ -288,7 +289,7 @@ static void playNote(EventMap* events, const Note* note, int channel, int pitch,
 
     NPlayEvent ev(ME_NOTEON, channel, pitch, velo);
     ev.setOriginatingStaff(staffIdx);
-    ev.setTuning(note->tuning());
+    ev.setTuning(note->etuning());
     ev.setNote(note);
     if (offTime < onTime) {
         offTime = onTime;

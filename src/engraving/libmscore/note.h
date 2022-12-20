@@ -33,6 +33,7 @@
 #include "engravingitem.h"
 
 #include "noteevent.h"
+#include "accidental.h"
 #include "pitchspelling.h"
 #include "shape.h"
 #include "symbol.h"
@@ -341,6 +342,7 @@ public:
     int octave() const;
     int playingOctave() const;
     double tuning() const { return _tuning; }
+    double etuning() const { return _tuning + (accidental() ? accidental()->centOffset() : 0); } ///< effective tuning 
     void setTuning(double v) { _tuning = v; }
     void undoSetTpc(int v);
     int transposition() const;

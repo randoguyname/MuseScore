@@ -868,9 +868,9 @@ String Note::tpcUserName(const bool explicitAccidental, bool full) const
     }
 
     String pitchOffset;
-    if (tuning() != 0) {
+    if (etuning() != 0) {
         char buffer[50];
-        sprintf(buffer, "%+.3f", tuning());
+        sprintf(buffer, "%+.3f", etuning());
         pitchOffset = String::fromAscii(buffer);
     }
 

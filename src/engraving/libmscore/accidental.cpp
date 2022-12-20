@@ -309,6 +309,15 @@ SymId Accidental::symbol() const
 }
 
 //---------------------------------------------------------
+//   centOffset
+//---------------------------------------------------------
+
+double Accidental::centOffset() const
+{
+    return accList[int(accidentalType())].centOffset;
+}
+
+//---------------------------------------------------------
 //   subtype2value
 //    returns the resulting pitch offset
 //---------------------------------------------------------
